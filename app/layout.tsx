@@ -31,8 +31,15 @@ export const metadata: Metadata = {
     siteName: 'Pinglestone Barn',
     type: 'website',
     locale: 'en_GB',
+    url: 'https://pinglestone.com',
+    title: 'Pinglestone Barn | Hampshire Wedding Venue',
+    description:
+      'An exclusive Hampshire wedding venue set among vines on the banks of the River Arle, near Alresford. Up to 150 guests. Exclusive hire.',
   },
-  icons: { icon: '/favicon.ico' },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
