@@ -2,16 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import MobileMenu from './MobileMenu'
-
-const navLinks = [
-  { label: 'Weddings', href: '/weddings' },
-  { label: 'Accommodation', href: '/accommodation' },
-  {
-    label: 'Louis Pommery ↗',
-    href: 'https://louispommeryengland.co.uk',
-    external: true,
-  },
-]
+import { navLinks } from '@/lib/nav'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)

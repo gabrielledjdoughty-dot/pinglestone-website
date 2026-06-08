@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import Lightbox from './Lightbox'
 
 interface Photo {
@@ -14,6 +14,7 @@ interface PhotoGridProps {
 
 export default function PhotoGrid({ photos }: PhotoGridProps) {
   const [active, setActive] = useState<Photo | null>(null)
+  const handleClose = useCallback(() => setActive(null), [])
 
   return (
     <>
@@ -54,7 +55,7 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
         <Lightbox
           src={active.src}
           alt={active.alt}
-          onClose={() => setActive(null)}
+          onClose={handleClose}
         />
       )}
     </>

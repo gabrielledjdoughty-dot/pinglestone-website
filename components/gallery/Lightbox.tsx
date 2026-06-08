@@ -21,6 +21,9 @@ export default function Lightbox({ src, alt, onClose }: LightboxProps) {
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photo lightbox"
       className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
       onClick={onClose}
     >
@@ -28,6 +31,7 @@ export default function Lightbox({ src, alt, onClose }: LightboxProps) {
         className="absolute top-6 right-6 text-white text-3xl leading-none"
         onClick={onClose}
         aria-label="Close"
+        autoFocus
       >
         ✕
       </button>

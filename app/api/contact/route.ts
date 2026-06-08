@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 function sanitize(value: string): string {
   return value.replace(/[\r\n]/g, ' ').trim()
 }
@@ -10,6 +8,11 @@ function sanitize(value: string): string {
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export async function POST(req: NextRequest) {
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json({ error: 'Service unavailable' }, { status: 503 })
+  }
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
   let body: Record<string, unknown>
   try {
     body = await req.json()
@@ -33,7 +36,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Date is required' }, { status: 400 })
   }
 
-  // Length limits
   if (rawName.length > 200) {
     return NextResponse.json({ error: 'Name is too long' }, { status: 400 })
   }
@@ -43,16 +45,17 @@ export async function POST(req: NextRequest) {
   if (rawDate.length > 100) {
     return NextResponse.json({ error: 'Date is too long' }, { status: 400 })
   }
+  if (rawPartnerName.length > 200) {
+    return NextResponse.json({ error: 'Partner name is too long' }, { status: 400 })
+  }
   if (rawMessage.length > 5000) {
     return NextResponse.json({ error: 'Message is too long' }, { status: 400 })
   }
 
-  // Email format validation
   if (!EMAIL_REGEX.test(rawEmail.trim())) {
     return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
   }
 
-  // Sanitize: strip newlines to prevent header injection
   const name = sanitize(rawName)
   const email = sanitize(rawEmail)
   const date = sanitize(rawDate)
@@ -67,16 +70,24 @@ export async function POST(req: NextRequest) {
     ...(message ? ['', 'Message:', message] : []),
   ].join('\n')
 
-  const { error } = await resend.emails.send({
-    from: process.env.FROM_EMAIL ?? 'noreply@pinglestone.com',
-    to: 'dw@pinglestone.com',
-    replyTo: email,
-    subject: `New Wedding Enquiry from ${name}`,
-    text: emailBody,
-  })
+  try {
+    const { error } = await resend.emails.send({
+      from: process.env.FROM_EMAIL ?? 'noreply@pinglestone.com',
+      to: 'dw@pinglestone.com',
+      replyTo: email,
+      subject: `New Wedding Enquiry from ${name}`,
+      text: emailBody,
+    })
 
-  if (error) {
-    console.error('Resend error:', error)
+    if (error) {
+      console.error('Resend error:', error)
+      return NextResponse.json(
+        { error: 'Failed to send email. Please try again.' },
+        { status: 500 }
+      )
+    }
+  } catch (err) {
+    console.error('Resend exception:', err)
     return NextResponse.json(
       { error: 'Failed to send email. Please try again.' },
       { status: 500 }

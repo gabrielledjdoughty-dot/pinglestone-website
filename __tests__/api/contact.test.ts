@@ -12,6 +12,9 @@ jest.mock('resend', () => ({
   })),
 }))
 
+beforeAll(() => { process.env.RESEND_API_KEY = 'test-key' })
+afterAll(() => { delete process.env.RESEND_API_KEY })
+
 function makeRequest(body: Record<string, string>) {
   return new NextRequest('http://localhost/api/contact', {
     method: 'POST',
@@ -71,12 +74,7 @@ describe('POST /api/contact', () => {
   })
 
   it('strips newlines from name to prevent header injection', async () => {
-    // The resend singleton is created at module load time with the top-level mock.
-    // Access the send spy that was already installed by the module-level jest.mock.
     const { Resend } = require('resend')
-    const mockInstance = Resend.mock.results[0].value
-    const mockSend = mockInstance.emails.send as jest.Mock
-
     const req = makeRequest({
       name: 'Jane\nBcc: attacker@evil.com',
       email: 'jane@example.com',
@@ -84,9 +82,10 @@ describe('POST /api/contact', () => {
     })
     const res = await POST(req)
     expect(res.status).toBe(200)
+    // Resend is instantiated inside the handler — get the most recent mock instance
+    const mockInstance = Resend.mock.results[Resend.mock.results.length - 1].value
+    const mockSend = mockInstance.emails.send as jest.Mock
     const callArgs = mockSend.mock.calls[mockSend.mock.calls.length - 1][0]
-    // The newline must be gone (that's the injection vector); the text after it
-    // may survive as a harmless literal string, which is acceptable.
     expect(callArgs.subject).not.toContain('\n')
     expect(callArgs.subject).not.toContain('\r')
   })

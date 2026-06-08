@@ -1,21 +1,12 @@
 'use client'
 import { useEffect } from 'react'
 import Link from 'next/link'
+import { navLinks } from '@/lib/nav'
 
 interface MobileMenuProps {
   isOpen: boolean
   onClose: () => void
 }
-
-const navLinks = [
-  { label: 'Weddings', href: '/weddings' },
-  { label: 'Accommodation', href: '/accommodation' },
-  {
-    label: 'Louis Pommery ↗',
-    href: 'https://louispommeryengland.co.uk',
-    external: true,
-  },
-]
 
 export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   useEffect(() => {

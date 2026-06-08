@@ -40,9 +40,11 @@ export default function FAQAccordion() {
       {faqs.map((faq, i) => (
         <div key={i}>
           <button
+            id={`btn-${i}`}
             className="w-full flex justify-between items-center py-5 text-left"
             onClick={() => setOpen(open === i ? null : i)}
             aria-expanded={open === i}
+            aria-controls={`panel-${i}`}
           >
             <span className="font-cormorant font-light text-xl text-charcoal pr-4">
               {faq.q}
@@ -55,6 +57,9 @@ export default function FAQAccordion() {
             </span>
           </button>
           <div
+            id={`panel-${i}`}
+            role="region"
+            aria-labelledby={`btn-${i}`}
             className={`overflow-hidden transition-all duration-300 ${
               open === i ? 'max-h-96 pb-5' : 'max-h-0'
             }`}
