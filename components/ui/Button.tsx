@@ -32,7 +32,8 @@ export default function Button({
 }: ButtonProps) {
   const base =
     'inline-block font-jost font-light tracking-widest uppercase text-xs px-8 py-4 transition-all duration-300'
-  const classes = `${base} ${variantClasses[variant]} ${className}`
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : ''
+  const classes = `${base} ${variantClasses[variant]} ${disabledClasses} ${className}`
 
   if (href) {
     const isExternal = href.startsWith('http')
