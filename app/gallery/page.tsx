@@ -7,13 +7,19 @@ export const metadata: Metadata = {
     'Photos of Pinglestone Barn — the venue, grounds, vineyard, and on-site accommodation.',
 }
 
-// Replace placeholder photos with real ones when supplied by Dave.
-// Organise into: barn exterior, barn interior, grounds/vineyard, river, accommodation, weddings
-const placeholderPhotos = Array.from({ length: 12 }, (_, i) => ({
+const realPhotos = [
+  { src: '/images/wedding-first-dance.png', alt: 'First dance under the fairy lights', placeholder: false as const },
+  { src: '/images/wedding-barn-portrait.png', alt: 'Wedding couple at Pinglestone Barn', placeholder: false as const },
+  { src: '/images/wedding-field-portrait.png', alt: 'Wedding couple in the meadow', placeholder: false as const },
+]
+
+const placeholderPhotos = Array.from({ length: 9 }, (_, i) => ({
   src: '',
-  alt: `Pinglestone Barn photo ${i + 1}`,
+  alt: `Pinglestone Barn photo ${i + 4}`,
   placeholder: true as const,
 }))
+
+const allPhotos = [...realPhotos, ...placeholderPhotos]
 
 export default function GalleryPage() {
   return (
@@ -25,7 +31,7 @@ export default function GalleryPage() {
         <p className="font-jost font-light text-sm text-stone text-center mb-12 tracking-widest uppercase">
           The barn · The grounds · The vineyard · The river
         </p>
-        <PhotoGrid photos={placeholderPhotos} />
+        <PhotoGrid photos={allPhotos} />
       </div>
     </section>
   )
