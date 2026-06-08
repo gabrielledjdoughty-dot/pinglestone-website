@@ -24,7 +24,8 @@ export default function Footer() {
               Pinglestone
             </p>
             <p className="font-jost font-light text-sm leading-relaxed text-white/70">
-              Old Alresford, Hampshire
+              Pinglestone Farm, Old Alresford<br />
+              Hampshire, SO24 9TB
             </p>
           </div>
 

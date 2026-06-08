@@ -7,5 +7,7 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { label: 'Weddings', href: '/weddings' },
   { label: 'Accommodation', href: '/accommodation' },
+  { label: 'About', href: '/about' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Louis Pommery ↗', href: 'https://louispommeryengland.co.uk', external: true },
 ]
