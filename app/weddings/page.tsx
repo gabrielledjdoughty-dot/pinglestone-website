@@ -1,0 +1,195 @@
+import type { Metadata } from 'next'
+import Hero from '@/components/ui/Hero'
+import SectionHeading from '@/components/ui/SectionHeading'
+import Divider from '@/components/ui/Divider'
+import Button from '@/components/ui/Button'
+import InclusionsList from '@/components/weddings/InclusionsList'
+import TestimonialCards from '@/components/weddings/TestimonialCards'
+import FAQAccordion from '@/components/weddings/FAQAccordion'
+import CivilCeremonyNote from '@/components/weddings/CivilCeremonyNote'
+
+export const metadata: Metadata = {
+  title: 'Weddings | Pinglestone Barn, Hampshire',
+  description:
+    'Pinglestone Barn — a beautiful Hampshire wedding venue set among vines on the banks of the River Arle, near Alresford. Exclusive hire, on-site accommodation, and English sparkling wine from our own vineyard. Up to 150 guests.',
+}
+
+export default function WeddingsPage() {
+  return (
+    <>
+      <Hero
+        headline="A Hampshire Wedding Unlike Any Other"
+        ctaPrimary={{ label: 'Enquire Now', href: '/contact' }}
+      />
+
+      {/* Opening */}
+      <section className="bg-cream py-24 px-6">
+        <div className="max-w-content mx-auto">
+          <div className="max-w-3xl">
+            <Divider />
+            <p className="font-jost font-light text-lg leading-relaxed text-charcoal">
+              Pinglestone is a working farm and vineyard nestled in the chalk
+              downland above Alresford, where the River Arle runs clear and cold
+              through banks of watercress. The barn — barn-framed, fairy-lit, and
+              entirely yours for the day — sits at the heart of it all,
+              surrounded by vines that produce award-winning English sparkling
+              wine under the Louis Pommery England label. It is the sort of place
+              that feels genuinely discovered rather than booked.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Inclusions */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-content mx-auto">
+          <SectionHeading
+            heading="Pinglestone Barn"
+            standfirst="Exclusive hire · Up to 150 guests"
+          />
+          <div className="mt-12 max-w-2xl">
+            <InclusionsList />
+            <p className="font-jost font-light text-sm italic text-stone mt-8">
+              For full pricing and availability, please get in touch.
+            </p>
+            <div className="mt-6">
+              <Button href="/contact">Enquire Now</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Civil ceremony note */}
+      <section className="py-12 px-6 bg-cream">
+        <div className="max-w-content mx-auto">
+          <div className="max-w-3xl">
+            <CivilCeremonyNote />
+          </div>
+        </div>
+      </section>
+
+      {/* Vineyard */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-content mx-auto">
+          <div className="max-w-3xl">
+            <SectionHeading heading="Champagne on Your Doorstep" />
+            <p className="mt-6 font-jost font-light text-lg leading-relaxed text-charcoal">
+              Pinglestone is home to one of Hampshire&rsquo;s most exciting young
+              vineyards, grown in partnership with the House of Pommery to produce
+              Louis Pommery England — an English sparkling wine of genuine
+              distinction. Your guests can raise a glass knowing it was grown right
+              here, on the very hillside surrounding the barn.
+            </p>
+            <a
+              href="https://louispommeryengland.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 font-jost font-light text-sm text-sage border-b border-sage hover:text-sage-dark transition-colors"
+            >
+              Discover Louis Pommery England ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Setting */}
+      <section className="py-24 px-6 bg-sage-light">
+        <div className="max-w-content mx-auto">
+          <div className="max-w-3xl">
+            <SectionHeading heading="Alresford, Hampshire" />
+            <p className="mt-6 font-jost font-light text-lg leading-relaxed text-charcoal">
+              The farm sits above the Georgian market town of Alresford — one of
+              Hampshire&rsquo;s most charming small towns, with independent shops,
+              riverside walks and excellent restaurants within a ten-minute stroll.
+              London Waterloo is under an hour by train, and Winchester is fifteen
+              minutes by car.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Catering */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-content mx-auto">
+          <div className="max-w-3xl">
+            <SectionHeading heading="Food That Does Justice to the Day" />
+            <p className="mt-6 font-jost font-light text-lg leading-relaxed text-charcoal">
+              Our catering partner, The Little Kitchen Company, specialises in
+              weddings and brings a wonderful approach to seasonal Hampshire
+              produce — elegant, relaxed, and utterly delicious. Their experienced
+              team works closely with couples to create menus that feel personal
+              and unhurried.
+            </p>
+            <a
+              href="https://thelittlekitchencompany.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 font-jost font-light text-sm text-sage border-b border-sage hover:text-sage-dark transition-colors"
+            >
+              thelittlekitchencompany.com ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 px-6 bg-cream">
+        <div className="max-w-content mx-auto">
+          <SectionHeading heading="What Our Couples Say" centred />
+          <div className="mt-12">
+            <TestimonialCards />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-content mx-auto">
+          <div className="max-w-3xl">
+            <SectionHeading heading="Frequently Asked Questions" />
+            <div className="mt-12">
+              <FAQAccordion />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="bg-sage py-24 px-6 text-center text-white">
+        <div className="max-w-content mx-auto">
+          <h2 className="font-cormorant font-light text-4xl md:text-5xl mb-4">
+            Begin Your Story Here
+          </h2>
+          <p className="font-jost font-light text-lg mb-10 text-white/80">
+            We&rsquo;d love to hear about your plans.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button href="/contact" variant="ghost">
+              Get in Touch
+            </Button>
+            <a
+              href="mailto:dw@pinglestone.com"
+              className="font-jost font-light text-sm text-white/80 hover:text-white underline"
+            >
+              dw@pinglestone.com
+            </a>
+            <a
+              href="tel:07880883014"
+              className="font-jost font-light text-sm text-white/80 hover:text-white"
+            >
+              07880 883 014
+            </a>
+            <a
+              href="https://wa.me/447880883014"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-jost font-light text-sm text-white/80 hover:text-white underline"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
