@@ -1,101 +1,55 @@
-import Image from "next/image";
+import Hero from '@/components/ui/Hero'
+import NavTiles from '@/components/home/NavTiles'
+import TestimonialBand from '@/components/home/TestimonialBand'
+import Button from '@/components/ui/Button'
+import Divider from '@/components/ui/Divider'
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Hero
+        headline={"Where Love Begins,\nAmong the Vines"}
+        subhead="An exclusive Hampshire wedding venue on a working farm and vineyard, on the banks of the River Arle"
+        ctaPrimary={{ label: 'Enquire About Your Wedding', href: '/contact' }}
+        ctaSecondary={{ label: 'Explore the venue', href: '/weddings' }}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <NavTiles />
+
+      {/* Introduction */}
+      <section className="bg-cream py-24 px-6">
+        <div className="max-w-[680px] mx-auto text-center">
+          <Divider />
+          <p className="font-jost font-light text-lg leading-relaxed text-charcoal">
+            Nestled in the Hampshire countryside above Alresford, Pinglestone
+            Barn is an exclusive wedding venue set on a working farm and
+            vineyard on the banks of the River Arle. The barn is yours alone for
+            the day — a rare, unhurried setting where the vines, the chalk
+            stream and the Hampshire downland do most of the talking.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      <TestimonialBand />
+
+      {/* CTA Banner */}
+      <section
+        className="py-24 px-6 text-center"
+        style={{ backgroundColor: '#C9A96E22', borderTop: '1px solid #C9A96E44' }}
+      >
+        <div className="max-w-content mx-auto">
+          <h2 className="font-cormorant font-light text-4xl md:text-5xl text-charcoal mb-6">
+            Begin Your Story Here
+          </h2>
+          <p className="font-jost font-light text-lg text-stone mb-10 max-w-md mx-auto">
+            We&rsquo;d love to hear about your plans. Get in touch to check
+            availability or arrange a visit.
+          </p>
+          <Button href="/contact" variant="primary">
+            Get in Touch
+          </Button>
+        </div>
+      </section>
+    </>
+  )
 }
