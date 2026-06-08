@@ -57,4 +57,37 @@ describe('POST /api/contact', () => {
     const res = await POST(req)
     expect(res.status).toBe(400)
   })
+
+  it('returns 400 when email format is invalid', async () => {
+    const req = makeRequest({
+      name: 'Jane',
+      email: 'not-an-email',
+      date: '2027-06-15',
+    })
+    const res = await POST(req)
+    const body = await res.json()
+    expect(res.status).toBe(400)
+    expect(body.error).toMatch(/invalid email/i)
+  })
+
+  it('strips newlines from name to prevent header injection', async () => {
+    // The resend singleton is created at module load time with the top-level mock.
+    // Access the send spy that was already installed by the module-level jest.mock.
+    const { Resend } = require('resend')
+    const mockInstance = Resend.mock.results[0].value
+    const mockSend = mockInstance.emails.send as jest.Mock
+
+    const req = makeRequest({
+      name: 'Jane\nBcc: attacker@evil.com',
+      email: 'jane@example.com',
+      date: '2027-06-15',
+    })
+    const res = await POST(req)
+    expect(res.status).toBe(200)
+    const callArgs = mockSend.mock.calls[mockSend.mock.calls.length - 1][0]
+    // The newline must be gone (that's the injection vector); the text after it
+    // may survive as a harmless literal string, which is acceptable.
+    expect(callArgs.subject).not.toContain('\n')
+    expect(callArgs.subject).not.toContain('\r')
+  })
 })
