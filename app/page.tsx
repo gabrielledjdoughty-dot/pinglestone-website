@@ -34,8 +34,7 @@ export default function HomePage() {
 
       {/* CTA Banner */}
       <section
-        className="py-24 px-6 text-center"
-        style={{ backgroundColor: '#C9A96E22', borderTop: '1px solid #C9A96E44' }}
+        className="py-24 px-6 text-center bg-gold/10 border-t border-gold/30"
       >
         <div className="max-w-content mx-auto">
           <h2 className="font-cormorant font-light text-4xl md:text-5xl text-charcoal mb-6">
