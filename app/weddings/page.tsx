@@ -86,7 +86,7 @@ export default function WeddingsPage() {
               rel="noopener noreferrer"
               className="inline-block mt-6 font-jost font-light text-sm text-sage border-b border-sage hover:text-sage-dark transition-colors"
             >
-              Discover Louis Pommery England ↗
+              Discover Louis Pommery England
             </a>
           </div>
         </div>
