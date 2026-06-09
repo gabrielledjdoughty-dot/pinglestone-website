@@ -9,5 +9,5 @@ export const navLinks: NavLink[] = [
   { label: 'Accommodation', href: '/accommodation' },
   { label: 'About', href: '/about' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Louis Pommery', href: 'https://louispommeryengland.co.uk', external: true },
+  { label: 'Louis Pommery', href: '/louis-pommery' },
 ]

@@ -81,12 +81,10 @@ export default function WeddingsPage() {
               here, on the very hillside surrounding the barn.
             </p>
             <a
-              href="https://louispommeryengland.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/louis-pommery"
               className="inline-block mt-6 font-jost font-light text-sm text-sage border-b border-sage hover:text-sage-dark transition-colors"
             >
-              Discover Louis Pommery England
+              Discover Louis Pommery England ↗
             </a>
           </div>
         </div>
@@ -120,14 +118,24 @@ export default function WeddingsPage() {
               team works closely with couples to create menus that feel personal
               and unhurried.
             </p>
-            <a
-              href="https://thelittlekitchencompany.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6 font-jost font-light text-sm text-sage border-b border-sage hover:text-sage-dark transition-colors"
-            >
-              thelittlekitchencompany.com ↗
-            </a>
+            <div className="flex gap-6 mt-6">
+              <a
+                href="https://thelittlekitchencompany.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-jost font-light text-sm text-sage border-b border-sage hover:text-sage-dark transition-colors"
+              >
+                thelittlekitchencompany.com ↗
+              </a>
+              <a
+                href="https://www.instagram.com/thelittlekitchencompany/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-jost font-light text-sm text-sage border-b border-sage hover:text-sage-dark transition-colors"
+              >
+                @thelittlekitchencompany ↗
+              </a>
+            </div>
           </div>
         </div>
       </section>
