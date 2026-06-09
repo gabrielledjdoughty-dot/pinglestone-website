@@ -19,13 +19,13 @@ export default function StoryBlock({
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
       {/* Image */}
-      <div className="relative aspect-[3/4] overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden bg-stone/10">
         {imageSrc ? (
           <Image
             src={imageSrc}
             alt={imageAlt}
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         ) : (
