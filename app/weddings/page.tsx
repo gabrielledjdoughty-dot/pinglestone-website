@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Hero from '@/components/ui/Hero'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Divider from '@/components/ui/Divider'
@@ -43,17 +44,32 @@ export default function WeddingsPage() {
       {/* Inclusions */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-content mx-auto">
-          <SectionHeading
-            heading="Pinglestone Barn"
-            standfirst="Exclusive hire · Up to 150 guests"
-          />
-          <div className="mt-12 max-w-2xl">
-            <InclusionsList />
-            <p className="font-jost font-light text-sm italic text-stone mt-8">
-              For full pricing and availability, please get in touch.
-            </p>
-            <div className="mt-6">
-              <Button href="/contact">Enquire Now</Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            {/* Photo */}
+            <div className="relative aspect-[3/4] overflow-hidden">
+              <Image
+                src="/images/pinglestone-barn.png"
+                alt="Aerial view of Pinglestone Barn and vineyard, Hampshire"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            {/* Text */}
+            <div>
+              <SectionHeading
+                heading="Pinglestone Barn"
+                standfirst="Exclusive hire · Up to 150 guests"
+              />
+              <div className="mt-12">
+                <InclusionsList />
+                <p className="font-jost font-light text-sm italic text-stone mt-8">
+                  For full pricing and availability, please get in touch.
+                </p>
+                <div className="mt-6">
+                  <Button href="/contact">Enquire Now</Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
