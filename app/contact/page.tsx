@@ -23,9 +23,9 @@ export default function ContactPage() {
         </p>
 
         {/* Contact strip */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 text-center border-y border-gold/30 py-10">
           <div>
-            <div className="text-2xl mb-2">📧</div>
+            <p className="font-jost font-light text-xs tracking-widest uppercase text-stone mb-2">Email</p>
             <a
               href="mailto:dw@pinglestone.com"
               className="font-jost font-light text-base text-charcoal hover:text-sage transition-colors"
@@ -34,7 +34,7 @@ export default function ContactPage() {
             </a>
           </div>
           <div>
-            <div className="text-2xl mb-2">📞</div>
+            <p className="font-jost font-light text-xs tracking-widest uppercase text-stone mb-2">Phone</p>
             <a
               href="tel:07880883014"
               className="font-jost font-light text-base text-charcoal hover:text-sage transition-colors"
@@ -43,14 +43,14 @@ export default function ContactPage() {
             </a>
           </div>
           <div>
-            <div className="text-2xl mb-2">💬</div>
+            <p className="font-jost font-light text-xs tracking-widest uppercase text-stone mb-2">WhatsApp</p>
             <a
               href="https://wa.me/447880883014"
               target="_blank"
               rel="noopener noreferrer"
               className="font-jost font-light text-base text-charcoal hover:text-sage transition-colors"
             >
-              WhatsApp
+              Message Us
             </a>
           </div>
         </div>
