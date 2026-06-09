@@ -3,11 +3,7 @@ import Link from 'next/link'
 const tiles = [
   { label: 'Weddings', href: '/weddings', external: false },
   { label: 'Accommodation', href: '/accommodation', external: false },
-  {
-    label: 'Louis Pommery',
-    href: 'https://louispommeryengland.co.uk',
-    external: true,
-  },
+  { label: 'Louis Pommery', href: '/louis-pommery', external: false },
 ]
 
 export default function NavTiles() {
