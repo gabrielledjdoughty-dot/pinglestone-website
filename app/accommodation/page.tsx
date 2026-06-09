@@ -48,7 +48,12 @@ export default function AccommodationPage() {
         note="Included for wedding couples for 2 nights. Also available to book directly for other stays — no need to book via Airbnb."
         ctaLabel="Enquire About Barn Lodge"
         images={[
-          { src: '/images/barn-lodge/bl-1.jpg', alt: 'Barn Lodge interior, Pinglestone Farm' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/49de7512-ca22-4427-9d33-da46c04f0391.jpeg?im_w=1440', alt: 'Barn Lodge, Pinglestone Farm' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/81762383-feff-4514-bf97-b100a0b12f59.jpeg?im_w=1440', alt: 'Barn Lodge interior' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/2b498d61-572d-4504-b057-2d70a93d3ab6.jpeg?im_w=1440', alt: 'Barn Lodge bedroom' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/1d4bb95c-844a-4cd1-9818-f102c8c9a58e.jpeg?im_w=1440', alt: 'Barn Lodge living area' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/ea0b8950-90a0-4b44-b780-39ead3cfa62c.jpeg?im_w=1440', alt: 'Barn Lodge kitchen' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/aee73ca1-1773-4fea-86ba-dc8439292da8.jpeg?im_w=1440', alt: 'Barn Lodge exterior' },
         ]}
       />
 
@@ -69,7 +74,12 @@ export default function AccommodationPage() {
         note="Included for the wedding couple on the wedding night. Also available to book directly."
         ctaLabel="Enquire About The Arle Hut"
         images={[
-          { src: '/images/arle-hut/ah-1.jpg', alt: "The Arle Hut shepherd's hut, Pinglestone Farm" },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1191827707084926873/original/e6da1e47-02ad-4685-9810-b757261a8e3f.jpeg?im_w=1440', alt: 'The Arle Hut exterior, River Arle' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1191827707084926873/original/996834e9-5f9f-4e51-b3fb-4c2fa4302d8f.jpeg?im_w=1440', alt: 'The Arle Hut interior' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1191827707084926873/original/126ee0c5-f920-4562-b992-9845156a889c.jpeg?im_w=1440', alt: 'The Arle Hut bedroom' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1191827707084926873/original/060fb205-f235-496a-9b21-42af339d04aa.jpeg?im_w=1440', alt: 'The Arle Hut hot bath by the river' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1191827707084926873/original/ae0aa8d3-ef46-463e-a415-5b5bd356b91d.jpeg?im_w=1440', alt: 'The Arle Hut firepit' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1191827707084926873/original/b16bd8c0-8723-4c7b-a79d-cdd9a7045a43.jpeg?im_w=1440', alt: 'The Arle Hut river view' },
         ]}
         reversed
       />
