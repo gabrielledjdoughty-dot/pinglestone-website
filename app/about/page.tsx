@@ -30,8 +30,8 @@ export default function AboutPage() {
       <section className="bg-cream py-24 px-6">
         <div className="max-w-content mx-auto">
           <StoryBlock
-            imageSrc="/images/about/sarah-placeholder.jpg"
-            imageAlt="Sarah and family at Pinglestone Farm"
+            imageSrc="/images/about/sarah-david.png"
+            imageAlt="Sarah, David and their daughters at Pinglestone Farm"
             ctaLabel="Get in Touch"
             ctaHref="/contact"
           >
