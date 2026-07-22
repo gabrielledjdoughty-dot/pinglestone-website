@@ -1,12 +1,12 @@
 const inclusions = [
-  'Exclusive use of the barn, grounds and ceremony space',
-  'Tables, chairs and dancefloor',
-  'Stage and full bar',
-  'Fairy-lit outdoor canopy for drinks receptions',
-  'Lawn games and river views',
-  "Barn Lodge cottage (3 bed, sleeps 5) included for 2 nights",
+  'Exclusive use of the barn, courtyard and grounds',
+  'Stage, bar, dancefloor and DJ included',
+  'Fairy-lit outdoor courtyard for drinks receptions',
+  'Barn Lodge cottage (3 bed, sleeps 5) included for 2 nights',
   'The Arle Hut shepherd\'s hut included for the wedding night',
   'Ample on-site parking',
+  'Catering facilities',
+  'Toilets',
   'Set-up access from the Friday before your wedding',
   'Live music welcome · Music finishes by 11pm · No fireworks',
 ]

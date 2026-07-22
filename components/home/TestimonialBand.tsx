@@ -26,16 +26,16 @@ const testimonials = [
 
 export default function TestimonialBand() {
   return (
-    <section className="bg-sage py-20 px-6">
-      <div className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <section className="bg-sage py-12 md:py-20 px-6">
+      <div className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {testimonials.map((t, i) => (
           <div key={i} className="flex flex-col items-center text-center text-white">
-            <div className="relative w-full aspect-[3/4] overflow-hidden mb-8">
+            <div className="relative w-full aspect-[4/5] md:aspect-[3/4] overflow-hidden mb-8">
               <Image
                 src={t.photo}
                 alt={t.photoAlt}
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center md:object-top"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>

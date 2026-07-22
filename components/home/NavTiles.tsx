@@ -3,7 +3,7 @@ import Link from 'next/link'
 const tiles = [
   { label: 'Weddings', href: '/weddings', external: false },
   { label: 'Accommodation', href: '/accommodation', external: false },
-  { label: 'Louis Pommery', href: '/louis-pommery', external: false },
+  { label: 'Gallery', href: '/gallery', external: false },
 ]
 
 export default function NavTiles() {
@@ -23,7 +23,7 @@ export default function NavTiles() {
             className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
             style={{
               background:
-                'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #9B8E7E 100%)',
+                'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #7A7D62 100%)',
             }}
           />
           {/* Overlay */}
@@ -32,7 +32,7 @@ export default function NavTiles() {
           <span className="relative font-cormorant font-light text-white text-3xl tracking-wide">
             {tile.label}
             {tile.external && (
-              <span className="font-jost text-sm ml-1 align-super">↗</span>
+              <span className="font-jost text-sm ml-1 align-super">↗︎</span>
             )}
           </span>
         </Link>

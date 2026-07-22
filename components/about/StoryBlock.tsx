@@ -33,7 +33,7 @@ export default function StoryBlock({
             className="absolute inset-0"
             style={{
               background:
-                'linear-gradient(135deg, #5C6B4A 0%, #3D4832 70%, #9B8E7E 100%)',
+                'linear-gradient(135deg, #5C6B4A 0%, #3D4832 70%, #7A7D62 100%)',
             }}
           />
         )}

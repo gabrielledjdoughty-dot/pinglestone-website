@@ -4,7 +4,7 @@ export default function CivilCeremonyNote() {
       <span className="text-gold text-xl flex-shrink-0">ℹ</span>
       <p className="font-jost font-light text-base leading-relaxed text-charcoal">
         Pinglestone does not hold a civil ceremony licence. Couples are welcome
-        to arrange a legal ceremony at their local register office, then
+        to arrange a legal ceremony at their local registry office, then
         celebrate their blessing and reception here. Many of our couples choose
         a humanist or celebrant-led blessing — including at our beautiful spot
         by the river and willow tree.

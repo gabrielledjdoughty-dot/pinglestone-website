@@ -21,6 +21,7 @@ const jost = Jost({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.pinglestone.com'),
   title: {
     default: 'Pinglestone Barn | Hampshire Wedding Venue',
     template: '%s | Pinglestone Barn',
@@ -35,6 +36,14 @@ export const metadata: Metadata = {
     title: 'Pinglestone Barn | Hampshire Wedding Venue',
     description:
       'An exclusive Hampshire wedding venue set among vines on the banks of the River Arle, near Alresford. Up to 150 guests. Exclusive hire.',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Pinglestone Barn — Hampshire wedding venue',
+      },
+    ],
   },
   icons: {
     icon: '/favicon.svg',

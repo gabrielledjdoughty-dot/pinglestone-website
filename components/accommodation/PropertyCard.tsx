@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import Button from '@/components/ui/Button'
+import ImageCarousel from './ImageCarousel'
 
 interface PropertyCardProps {
   name: string
@@ -8,8 +8,11 @@ interface PropertyCardProps {
   features: string[]
   note: string
   ctaLabel: string
+  ctaHref?: string
+  airbnbHref?: string
   images: { src: string; alt: string }[]
   reversed?: boolean
+  bgColor?: 'cream' | 'white'
 }
 
 export default function PropertyCard({
@@ -19,38 +22,24 @@ export default function PropertyCard({
   features,
   note,
   ctaLabel,
+  ctaHref = '/contact',
+  airbnbHref,
   images,
   reversed = false,
+  bgColor = 'cream',
 }: PropertyCardProps) {
+  const bgClass = bgColor === 'white' ? 'bg-white' : 'bg-cream'
   return (
     <div
       className={`grid grid-cols-1 md:grid-cols-2 gap-0 ${
         reversed ? 'md:[&>*:first-child]:order-last' : ''
       }`}
     >
-      {/* Image */}
-      <div className="relative h-80 md:h-auto min-h-[400px] overflow-hidden">
-        {images[0] ? (
-          <Image
-            src={images[0].src}
-            alt={images[0].alt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        ) : (
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #9B8E7E 100%)',
-            }}
-          />
-        )}
-      </div>
+      {/* Image carousel */}
+      <ImageCarousel images={images} />
 
       {/* Content */}
-      <div className="bg-cream p-10 md:p-16 flex flex-col justify-center">
+      <div className={`${bgClass} p-6 sm:p-10 md:p-16 flex flex-col justify-center`}>
         <h2 className="font-cormorant font-light text-4xl text-charcoal mb-2">
           {name}
         </h2>
@@ -69,8 +58,18 @@ export default function PropertyCard({
           ))}
         </ul>
         <p className="font-jost font-light text-sm italic text-stone mb-6">{note}</p>
-        <div>
-          <Button href="/contact">{ctaLabel}</Button>
+        <div className="flex flex-col sm:flex-row gap-3 items-start">
+          <Button href={ctaHref}>{ctaLabel}</Button>
+          {airbnbHref && (
+            <a
+              href={airbnbHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border border-sage/30 text-sage font-jost font-light text-sm tracking-widest uppercase hover:bg-sage-light transition-colors"
+            >
+              View on Airbnb ↗︎
+            </a>
+          )}
         </div>
       </div>
     </div>

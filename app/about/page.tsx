@@ -3,6 +3,8 @@ import StoryBlock from '@/components/about/StoryBlock'
 
 export const metadata: Metadata = {
   title: 'About Sarah & David | Pinglestone Barn',
+  description:
+    'Meet Sarah and David, your hosts at Pinglestone Farm. They married in the barn in 2018 and began hosting weddings in 2024. Home to the Louis Pommery England vineyard.',
 }
 
 export default function AboutPage() {
@@ -10,10 +12,10 @@ export default function AboutPage() {
     <>
       {/* Page header */}
       <section
-        className="relative pt-40 pb-24 px-6 text-center text-white"
+        className="relative pt-28 pb-16 md:pt-40 md:pb-24 px-6 text-center text-white"
         style={{
           background:
-            'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #9B8E7E 100%)',
+            'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #7A7D62 100%)',
         }}
       >
         <div className="relative z-10">
@@ -39,22 +41,24 @@ export default function AboutPage() {
               <p>
                 David and Sarah live and work at Pinglestone, and married here in
                 the barn in 2018. They now have two daughters growing up on the
-                farm — a place they love with the particular intensity of people
-                who chose it, built something in it, and stayed.
+                farm — a place they love and are proud to call home.
               </p>
               <p>
-                They began hosting weddings in 2024, inspired by a charity ball
-                they threw at the venue, and the joy they felt watching other
-                people fall in love with it. Hosting is personal to them: they are
-                not a faceless company, and Pinglestone is not a wedding factory.
+                They began hosting weddings in 2024 after throwing a charity
+                ball for the Hampshire and Isle of Wight Air Ambulance (HIOWAA),
+                where David is a trustee. The joy of watching people fall in
+                love with the place made them realise they wanted to share it.
+                Hosting is personal to them: they are not a faceless company,
+                and Pinglestone is not a wedding factory.
                 Every couple who books gets their time, their attention, and a
                 genuine welcome.
               </p>
               <p>
                 Pinglestone is home to the award-winning Louis Pommery England
-                label, made in partnership with the House of Pommery in Champagne.
-                The vineyard is part of the estate, part of the experience, and
-                very much part of what makes the place feel unlike anywhere else.
+                label, made in partnership with Maison Pommery in Champagne.
+                The vineyard and winery are part of the estate, part of the
+                experience, and very much part of what makes the place feel
+                unlike anywhere else.
               </p>
               <p className="font-cormorant font-light text-xl italic text-sage">
                 We&rsquo;d love to show you around. Come and see for yourself.

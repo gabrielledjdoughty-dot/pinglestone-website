@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'Do you hold a civil ceremony licence?',
-    a: "We don't hold a civil ceremony licence, but many couples choose a humanist or celebrant-led blessing here on site — including at our beautiful spot by the river — and arrange their legal ceremony separately at a register office.",
+    a: "We don't hold a civil ceremony licence, but many couples choose a humanist or celebrant-led blessing here on site and arrange their legal ceremony separately at a registry office.",
   },
   {
     q: 'Is there parking on site?',
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: 'Can we have fireworks or live music?',
-    a: 'Live music is very welcome. Fireworks are not permitted on site. Music finishes at 11pm.',
+    a: 'Live music is welcome. Fireworks are not permitted on site. Music finishes at 11pm.',
   },
   {
     q: 'Do you have a list of recommended suppliers?',
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: 'Who manages the catering?',
-    a: 'Our catering partner is The Little Kitchen Company — specialists in wedding catering using seasonal Hampshire produce.',
+    a: 'Our exclusive catering partner is The Little Kitchen Company — specialists in wedding catering and event management.',
   },
 ]
 

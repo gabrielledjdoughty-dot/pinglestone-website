@@ -7,29 +7,20 @@ export const metadata: Metadata = {
     'Photos of Pinglestone Barn — the venue, grounds, vineyard, and on-site accommodation.',
 }
 
-const realPhotos = [
-  { src: '/images/wedding-first-dance.png', alt: 'First dance under the fairy lights', placeholder: false as const },
-  { src: '/images/wedding-barn-portrait.png', alt: 'Wedding couple at Pinglestone Barn', placeholder: false as const },
-  { src: '/images/wedding-field-portrait.png', alt: 'Wedding couple in the meadow', placeholder: false as const },
-]
-
-const placeholderPhotos = Array.from({ length: 9 }, (_, i) => ({
-  src: '',
-  alt: `Pinglestone Barn photo ${i + 4}`,
-  placeholder: true as const,
+const photos = Array.from({ length: 187 }, (_, i) => ({
+  src: `/images/gallery/gallery-${String(i + 1).padStart(3, '0')}.jpg`,
+  alt: `Pinglestone Barn photo ${i + 1}`,
 }))
-
-const allPhotos = [...realPhotos, ...placeholderPhotos]
 
 export default function GalleryPage() {
   return (
     <>
       {/* Page header */}
       <section
-        className="relative pt-40 pb-24 px-6 text-center text-white"
+        className="relative pt-28 pb-16 md:pt-40 md:pb-24 px-6 text-center text-white"
         style={{
           background:
-            'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #9B8E7E 100%)',
+            'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #7A7D62 100%)',
         }}
       >
         <div className="relative z-10">
@@ -43,9 +34,9 @@ export default function GalleryPage() {
       </section>
 
       {/* Grid */}
-      <section className="bg-cream py-24 px-6">
+      <section className="bg-white py-24 px-6">
         <div className="max-w-content mx-auto">
-          <PhotoGrid photos={allPhotos} />
+          <PhotoGrid photos={photos} />
         </div>
       </section>
     </>

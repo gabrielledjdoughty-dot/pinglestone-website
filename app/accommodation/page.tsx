@@ -13,10 +13,10 @@ export default function AccommodationPage() {
     <>
       {/* Hero */}
       <section
-        className="relative pt-40 pb-24 px-6 text-center text-white"
+        className="relative pt-28 pb-16 md:pt-40 md:pb-24 px-6 text-center text-white"
         style={{
           background:
-            'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #9B8E7E 100%)',
+            'linear-gradient(135deg, #5C6B4A 0%, #3D4832 50%, #7A7D62 100%)',
         }}
       >
         <div className="relative z-10">
@@ -34,45 +34,51 @@ export default function AccommodationPage() {
       {/* Barn Lodge */}
       <PropertyCard
         name="Barn Lodge"
-        standfirst="3 bedrooms · Sleeps 5 · ★5.0 on Airbnb"
+        standfirst="3 bedrooms · Sleeps 5 · ★︎5.0 on Airbnb"
+        bgColor="white"
         description="Tucked at the end of the 15th-century barn, Barn Lodge is a beautifully appointed three-bedroom cottage that feels every bit like a home away from home. Cosy, considered and luxurious, it overlooks the watercress beds with views across the chalk stream valley."
         features={[
           'Master: super-king Hypnos pocket-sprung bed, en-suite sink',
           'Bedroom 2: king-size bed, en-suite sink',
           'Bedroom 3: single (accessed via bedroom 2)',
           'Open-plan kitchen/dining/sitting room',
-          'Bosch oven + gas hob · Nespresso · Netflix + streaming',
-          'WiFi throughout · Washing machine',
+          'Oven + gas hob · Nespresso machine · Smart TV',
+          'WiFi · Washing machine',
           'Welcome tray with locally sourced milk, tea, coffee',
         ]}
-        note="Included for wedding couples for 2 nights. Also available to book directly for other stays — no need to book via Airbnb."
+        note="Included for wedding couples for 2 nights. Also available to book directly."
         ctaLabel="Enquire About Barn Lodge"
+        ctaHref="mailto:dw@pinglestone.com?subject=Barn Lodge Enquiry"
+        airbnbHref="https://www.airbnb.co.uk/rooms/1239654487226261959"
         images={[
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/ea0b8950-90a0-4b44-b780-39ead3cfa62c.jpeg?im_w=1440', alt: 'Barn Lodge exterior' },
           { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/49de7512-ca22-4427-9d33-da46c04f0391.jpeg?im_w=1440', alt: 'Barn Lodge, Pinglestone Farm' },
           { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/81762383-feff-4514-bf97-b100a0b12f59.jpeg?im_w=1440', alt: 'Barn Lodge interior' },
           { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/2b498d61-572d-4504-b057-2d70a93d3ab6.jpeg?im_w=1440', alt: 'Barn Lodge bedroom' },
           { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/1d4bb95c-844a-4cd1-9818-f102c8c9a58e.jpeg?im_w=1440', alt: 'Barn Lodge living area' },
-          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/ea0b8950-90a0-4b44-b780-39ead3cfa62c.jpeg?im_w=1440', alt: 'Barn Lodge kitchen' },
-          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/aee73ca1-1773-4fea-86ba-dc8439292da8.jpeg?im_w=1440', alt: 'Barn Lodge exterior' },
+          { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1239654487226261959/original/aee73ca1-1773-4fea-86ba-dc8439292da8.jpeg?im_w=1440', alt: 'Barn Lodge bedroom 3' },
         ]}
       />
 
       {/* Arle Hut */}
       <PropertyCard
         name="The Arle Hut"
-        standfirst="Shepherd's hut for two · On the River Arle"
-        description="A brand-new, interior-designed shepherd's hut tucked beside a tributary of the River Arle — the most peaceful of locations, right on the water's edge. The perfect retreat for newlyweds."
+        standfirst="Shepherd's hut for two · On the River Arle · ★︎ 5.0 on Airbnb"
+        description="A brand-new, interior-designed shepherd's hut tucked beside a tributary of the River Arle — the most peaceful of locations, right on the water's edge. The perfect retreat for couples."
         features={[
           'King-size bed',
           'Kitchenette (hob, toaster, fridge)',
-          'Ensuite bathroom',
-          '2-person outdoor hot bath (hot water)',
-          'Firepit · River views',
+          'Ensuite shower room',
+          '2-person outdoor roll top bath (hot water)',
+          'Firepit (with logs) · River views',
           'Trout fishing available separately',
-          'Dogs welcome (£20/stay, not on bed)',
+          'Dogs welcome (£30/stay, not on bed)',
+          'Welcome tray with locally sourced milk, tea, coffee',
         ]}
         note="Included for the wedding couple on the wedding night. Also available to book directly."
         ctaLabel="Enquire About The Arle Hut"
+        ctaHref="mailto:dw@pinglestone.com?subject=The Arle Hut Enquiry"
+        airbnbHref="https://www.airbnb.co.uk/rooms/1191827707084926873"
         images={[
           { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1191827707084926873/original/e6da1e47-02ad-4685-9810-b757261a8e3f.jpeg?im_w=1440', alt: 'The Arle Hut exterior, River Arle' },
           { src: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1191827707084926873/original/996834e9-5f9f-4e51-b3fb-4c2fa4302d8f.jpeg?im_w=1440', alt: 'The Arle Hut interior' },
@@ -89,8 +95,8 @@ export default function AccommodationPage() {
         <div className="max-w-content mx-auto text-center">
           <Divider />
           <p className="font-jost font-light text-base text-stone max-w-xl mx-auto">
-            Further accommodation in Alresford town and Winchester (15 min) is
-            easily arranged for larger guest lists.
+            Further accommodation in Alresford and surrounding area is easily
+            arranged for larger guest lists.
           </p>
         </div>
       </section>
