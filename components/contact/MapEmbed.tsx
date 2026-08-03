@@ -15,8 +15,7 @@ export default function MapEmbed({ apiKey }: MapEmbedProps) {
           <p>Hampshire, SO24 9TB</p>
         </div>
         <p className="mt-4 font-jost font-light text-sm text-stone">
-          From Alresford town centre, follow the B3047 north for approximately
-          1 mile. Pinglestone Farm will be on your left.
+          What3words: ///impulse.descended.rehearsed
         </p>
         <a
           href="https://maps.google.com/?q=Pinglestone+Farm,+Old+Alresford,+SO24+9TB"

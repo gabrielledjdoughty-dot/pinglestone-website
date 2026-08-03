@@ -1,5 +1,6 @@
 'use client'
 import { useState, useCallback, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import Lightbox from './Lightbox'
 
 interface Photo {
@@ -54,13 +55,18 @@ export default function PhotoGrid({ photos }: PhotoGridProps) {
         {visiblePhotos.map((photo, i) => (
           <button
             key={photo.src}
-            className="relative aspect-[4/3] overflow-hidden group focus:outline-none"
+            className="relative aspect-[4/3] overflow-hidden group focus:outline-none bg-stone/10"
             onClick={() => setActiveIndex(i)}
             aria-label={photo.alt}
           >
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-              style={{ backgroundImage: `url(${photo.src})` }}
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              loading={i < 8 ? 'eager' : 'lazy'}
+              quality={60}
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
           </button>

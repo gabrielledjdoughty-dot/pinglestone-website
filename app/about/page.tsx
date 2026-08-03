@@ -44,16 +44,6 @@ export default function AboutPage() {
                 farm — a place they love and are proud to call home.
               </p>
               <p>
-                They began hosting weddings in 2024 after throwing a charity
-                ball for the Hampshire and Isle of Wight Air Ambulance (HIOWAA),
-                where David is a trustee. The joy of watching people fall in
-                love with the place made them realise they wanted to share it.
-                Hosting is personal to them: they are not a faceless company,
-                and Pinglestone is not a wedding factory.
-                Every couple who books gets their time, their attention, and a
-                genuine welcome.
-              </p>
-              <p>
                 Pinglestone is home to the award-winning Louis Pommery England
                 label, made in partnership with Maison Pommery in Champagne.
                 The vineyard and winery are part of the estate, part of the
